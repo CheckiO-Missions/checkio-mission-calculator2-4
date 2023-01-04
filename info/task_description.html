@@ -4,7 +4,7 @@
     <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
 </p>
 <p>
-    <i>The first solid-state electronic calculator was created in the early 1960s. Pocket-sized devices became available in the 1970s, especially after the Intel 4004, the first microprocessor, was developed by Intel for the Japanese calculator company Busicom. They later became used commonly within the petroleum industry (oil and gas). <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+    <i>The first known tools used to aid arithmetic calculations were: bones (used to tally items), pebbles, and counting boards, and the abacus, known to have been used by Sumerians and Egyptians before 2000 BC. Except for the Antikythera mechanism (an "out of the time" astronomical device), development of computing tools arrived near the start of the 17th century: the geometric-military compass (by Galileo), logarithms and Napier bones (by Napier), and the slide rule (by Edmund Gunter). <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
 </p>
 <p>
     In this series of missions you are going to build an elementary calculator.
@@ -13,9 +13,24 @@
     As an input, you get a sequence of keys pressed, and, as the result of that function, you should show what will be shown on the screen when the last key is pressed. Be attentive, it's not always the result of the expression. Actually, playing with the physical calculator or app will really helps you to catch edge cases.
 </p>
 <p>
-    The calculator has a very simple keyboard. In the forth mission float numbers are allowed. The "." takes space as one digit, so max digit space is 4 for float number results. It means that the maximum float number you can enter is "9999.". See preconditions below for additional information.
+    In the forth mission float numbers are allowed. The "." takes space as one digit, so max digit space is 4 for float number results. It means that the maximum float number you can enter is "9999.".
 </p>
-
+<p>
+    <strong>Expected behavior:</strong>
+    <ul>
+        <li><i>beginning operations are ignored;</i></li>
+        <li><i>beginning zeros should be removed, only-zeros number - converted to single zero;</i></li>
+        <li><i>among +- signs between numbers, the last one should be taken;</i></li>
+        <li><i>"==" means repeating the last operation;</i></li>
+        <li><i>"+=" or "-=" - adding/subtracting the number (or operations result) before the combination (doubling the number/subtracting itself);</i></li>
+        <li><i>the calculator ignores digit you enter after 5th;</i></li>
+        <li><i>"-" for numbers < 0 is NOT taking digit place;</i></li>
+        <li><i>if the abs(result) is more than 99999 - "error" is shown as a result;</i></li>
+        <li><i>for float, if the integer part of abs(result) is more then 9999 - "error" is shown as a result;</i></li>
+        <li><i>for float, in case the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -> 1.235);</i></li>
+        <li><i>for float, beginning and trailing zeros should be removed (until the "." of possible): 0.1200 -> .12 ,  123.00 -> 123. . It should be done after the rounding: 1.000123 -> 1.</i></li>
+    </ul>
+</p>
 <!-- Explain input and output values -->
 <p>
     <strong>Input:</strong> String.
@@ -39,18 +54,6 @@
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
 <p>
-    <strong>Preconditions:</strong>
-    <ul>
-        <li><i>beginning operations are ignored;</i></li>
-        <li><i>beginning zeros should be removed, only-zeros number - converted to single zero;</i></li>
-        <li><i>among +- signs between numbers, the last one should be taken;</i></li>
-        <li><i>"==" means repeating the last operation;</i></li>
-        <li><i>"+=" or "-=" - adding/subtracting the number (or operations result) before the combination (doubling the number/subtracting itself);</i></li>
-        <li><i>the calculator ignores digit you enter after 5th;</i></li>
-        <li><i>"-" for numbers < 0 is NOT taking digit place;</i></li>
-        <li><i>if the abs(result) is more than 99999 - "error" is shown as a result;</i></li>
-        <li><i>for float, if the integer part of abs(result) is more then 9999 - "error" is shown as a result;</i></li>
-        <li><i>for float, in case the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -> 1.235);</i></li>
-        <li><i>for float, beginning and trailing zeros should be removed (until the "." of possible): 0.1200 -> .12 ,  123.00 -> 123. . It should be done after the rounding: 1.000123 -> 1.</i></li>
-    </ul>
+    <strong>Precondition:</strong>
+    <i>Allowed characters: digits (0-9), dot (.), signs plus (+), minus (-) or equation (=) and their combinations (+=, +-, == etc.). The integer number may contain no more than 5 digits, float - 4.</i>
 </p>
