@@ -84,6 +84,11 @@ TESTS = {
             "explanation": "the same as 3+2+2=",
         },
         {
+            "input": ["4-1=="],
+            "answer": "2",
+            "explanation": "the same as 4-1-1=",
+        },
+        {
             "input": ["3+-2="],
             "answer": "1",
             "explanation": "the last sign is taken",
