@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+
+<p style="float: left; margin: 10px;">
+    <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
+</p>
+<p>
+    <i>已知最早用于辅助算术计算的工具是：骨头（用于清点物品）、鹅卵石和计数板，以及算盘，已知苏美尔人和埃及人在公元前 2000 年之前就已使用算盘。除了安提凯希拉装置（一种 "不合时宜 "的天文装置）之外，计算工具的发展是在 17 世纪初：几何军用罗盘（伽利略发明）、对数和纳皮尔骨（纳皮尔发明）以及滑尺（埃德蒙-冈特发明）。<a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    在本系列任务中，您将制作一个初级计算器。
+</p>
+<p>
+    作为输入，您需要按下一连串的按键，而作为该功能的结果，您应该显示出按下最后一个键时屏幕上将显示的内容。注意，这并不总是表达式的结果。实际上，使用实物计算器或应用程序确实有助于你捕捉边缘情况。
+</p>
+<p>
+    在第四个任务中，允许使用浮点数。. "占用一位数的空间，因此浮点数结果的最大位数空间为 4。这意味着您可以输入的最大浮点数是 "9999."。
+</p>
+<p>
+    <strong>预期行为</strong>
+    <ul>
+        <li><i>应删除开头的零，仅有零的数字 - 转换为单个零；</i></li>
+        <li><i>数字之间的 +- 符号应取最后一个；</i></li>
+        <li><i>"=="表示重复上次操作；</i></li>
+        <li><i>"+="或"-="--在组合前对数字（或运算结果）进行加减运算（将数字加倍或减去本身）；</i></li>
+        <li><i>计算器忽略在第 5 位之后输入的数字；</i></li>
+        <li><i>数字 &lt; 0 的"-"不占位数；</i></li>
+        <li><i>如果 abs(结果)大于 99999，结果显示为 "错误"；</i></li>
+        <li><i>对于浮点数，如果 abs(结果) 的整数部分大于 9999，则结果显示为 "错误"；</i></li>
+        <li><i>对于 float，如果数字的总长度超过 5 位数，则应四舍五入到 5 位数（1.23456 -&gt; 1.235）；</i></li>
+        <li><i>对于浮点数，应去掉开头和尾部的零（如果可能，去掉". "之前的零）： 0.1200 -&gt; .12 , 123.00 -&gt; 123..应在四舍五入后进行： 1.000123 -&gt; 1. .只有在输入数字结束后（按下非数字字符）才应删除尾数零。</i></li>
+    </ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong>字符串。
+</p>
+<p>
+   <strong>输出： 字符串</strong>字符串。
+</p>
+<p>
+    <strong>示例：字符串</strong>
+</p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>如何使用</strong>
+    <i>计算器被广泛使用。了解其输入和输出的原理既有趣又有用。</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>前提条件：</strong>
+    <i>允许使用的字符：数字 (0-9)、点 (.) 、符号加号 (+)、减号 (-) 或等号 (=) 及其组合 (+=, +-, == 等)。整数不得超过 5 位，浮点数不得超过 4 位。</i>
+</p>
