@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+
+<p style="float: left; margin: 10px;">
+    <a href="https://www.vecteezy.com/free-vector/calculator"><img title="example" src="{{MEDIA}}calc.png" alt="example" style="max-height: 200px"/></a> 
+</p>
+<p>
+    <i>Pierwszymi znanymi narzędziami używanymi do obliczeń arytmetycznych były: kości (używane do liczenia przedmiotów), kamyki i tablice do liczenia, a także liczydło, o którym wiadomo, że było używane przez Sumerów i Egipcjan przed 2000 rokiem pne. Z wyjątkiem mechanizmu z Antikythery (urządzenia astronomicznego "spoza epoki"), rozwój narzędzi obliczeniowych nastąpił na początku XVII wieku: kompas geometryczno-wojskowy (Galileusz), logarytmy i kości Napiera (Napier) oraz suwak (Edmund Gunter). <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    W tej serii misji zbudują Państwo elementarny kalkulator.
+</p>
+<p>
+    Jako dane wejściowe otrzymują Państwo sekwencję naciśniętych klawiszy, a jako wynik tej funkcji należy pokazać, co zostanie wyświetlone na ekranie po naciśnięciu ostatniego klawisza. Proszę uważać, nie zawsze jest to wynik wyrażenia. W rzeczywistości zabawa z fizycznym kalkulatorem lub aplikacją naprawdę pomoże Państwu wychwycić przypadki brzegowe.
+</p>
+<p>
+    W czwartej misji dozwolone są liczby zmiennoprzecinkowe. "." zajmuje miejsce jako jedna cyfra, więc maksymalne miejsce na cyfry wynosi 4 dla wyników liczb zmiennoprzecinkowych. Oznacza to, że maksymalna liczba zmiennoprzecinkowa, jaką można wprowadzić, to "9999".
+</p>
+<p>
+    <strong>Oczekiwane zachowanie:</strong>
+    <ul>
+        <li><i>początkowe zera powinny zostać usunięte, liczba z samymi zerami - przekonwertowana na pojedyncze zero;</i></li>
+        <li><i>wśród znaków +- między liczbami, ostatni powinien być brany pod uwagę;</i></li>
+        <li><i>"==" oznacza powtórzenie ostatniej operacji;</i></li>
+        <li><i>"+=" lub "-=" - dodanie/odjęcie liczby (lub wyniku operacji) przed kombinacją (podwojenie liczby/odjęcie samej siebie);</i></li>
+        <li><i>kalkulator ignoruje cyfrę wprowadzoną po 5;</i></li>
+        <li><i>"-" dla liczb &lt; 0 NIE zajmuje miejsca cyfry;</i></li>
+        <li><i>jeśli abs(wynik) jest większy niż 99999 - "błąd" jest wyświetlany jako wynik;</i></li>
+        <li><i>dla float, jeśli część całkowita abs(result) jest większa niż 9999 - jako wynik wyświetlany jest "error";</i></li>
+        <li><i>dla float, jeśli całkowita długość liczby jest większa niż 5 cyfr, należy ją zaokrąglić do 5 cyfr (1.23456 -&gt; 1.235);</i></li>
+        <li><i>w przypadku liczby zmiennoprzecinkowej należy usunąć początkowe i końcowe zera (do ".", jeśli to możliwe): 0.1200 -&gt; .12 , 123.00 -&gt; 123. . Należy to zrobić po zaokrągleniu: 1.000123 -&gt; 1. . Usuwanie końcowych zer powinno być wykonywane dopiero po zakończeniu wprowadzania liczby (naciśnięciu znaku niebędącego cyfrą).</i></li>
+    </ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Wejście:</strong> String.
+</p>
+<p>
+   <strong>Wyjście:</strong> String.
+</p>
+<p>
+    <strong>Przykłady:</strong>
+</p>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Jak jest używany:</strong>
+    <i>Kalkulatory są powszechnie używane. Zrozumienie zasad jego wejścia i wyjścia jest interesujące i przydatne.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Warunek wstępny:</strong>
+    <i>Dozwolone znaki: cyfry (0-9), kropka (.), znaki plus (+), minus (-) lub równanie (=) oraz ich kombinacje (+=, +-, == itp.). Liczba całkowita nie może zawierać więcej niż 5 cyfr, float - 4.</i>
+</p>
